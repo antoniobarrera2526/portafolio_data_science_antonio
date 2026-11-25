@@ -17,7 +17,7 @@
       <a class="brand" href="#inicio">AM<span>.</span></a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#perfil">Perfil</a>
+        <a href="#inicio">Perfil</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#experiencia">Experiencia</a>
         <a href="#formacion">Formación</a>
@@ -32,11 +32,17 @@
         <p class="eyebrow"><span class="status-dot"></span> PORTAFOLIO PROFESIONAL</p>
         <h1>Ciro Antonio<br><span>Medina Barrera</span></h1>
         <p class="hero-role">Economista · Business Intelligence · Data Analytics · Data Science</p>
-        <p class="hero-description">
-          Transformo datos en información útil para comprender problemas, identificar patrones
-          y apoyar decisiones basadas en evidencia. Combino análisis cuantitativo, herramientas
-          de inteligencia de negocios y modelos de machine learning.
+        <p class="profile-lead">
+          Economista y magíster en Business Intelligence, con formación en análisis cuantitativo
+          y experiencia en consulta y gestión de bases de datos mediante SQL. Desarrollo modelos
+          de machine learning con Python y R, y creo visualizaciones e informes analíticos con
+          Power BI y Looker Studio.
         </p>
+        <div class="profile-note">
+          <p>Cuento con experiencia en evaluación y formulación de proyectos de inversión pública en
+          entidades territoriales, así como en contratación estatal, incluyendo seguimiento, análisis y
+          apoyo en procesos de licitación pública.</p>
+        </div>
         <div class="hero-actions">
           <a class="button button-primary" href="#proyectos">Explorar proyectos <span>↗</span></a>
           <a class="button button-secondary" href="documentos/Antonio%20CV.pdf" target="_blank" rel="noopener">Descargar CV ↓</a>
@@ -97,52 +103,58 @@
       </div>
     </section>
 
-    <section class="section container" id="perfil">
-      <div class="section-heading">
-        <p class="eyebrow">01 / PERFIL</p>
-        <h2>Analítica con visión de negocio.</h2>
-      </div>
-      <div class="profile-grid">
-        <p class="profile-lead">
-          Economista y magíster en Business Intelligence, con formación en análisis cuantitativo
-          y experiencia en consulta y gestión de bases de datos mediante SQL. Desarrollo modelos
-          de machine learning con Python y R, y creo visualizaciones e informes analíticos con
-          Power BI y Looker Studio.
-        </p>
-        <div class="profile-note">
-          <span class="note-mark">✳</span>
-          <p>También cuento con experiencia en proyectos de inversión pública y contratación estatal,
-          incluyendo seguimiento, análisis y apoyo a procesos de licitación pública.</p>
-        </div>
-      </div>
-      <div class="skill-strip">
-        <span>Python</span><span>SQL</span><span>R / RStudio</span><span>Scikit-learn</span>
-        <span>Power BI</span><span>Looker Studio</span><span>STATA</span><span>Excel</span>
-      </div>
-    </section>
-
     <section class="section section-dark" id="proyectos">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">02 / PROYECTOS</p>
+          <p class="eyebrow">01 / PROYECTOS</p>
           <h2>Proyectos seleccionados<span class="accent">.</span></h2>
           <p class="section-intro">Aplicaciones de análisis de datos, modelamiento estadístico y machine learning.</p>
         </div>
         <div class="project-grid">
           <article class="project-card project-featured">
             <div class="project-visual visual-income">
-              <span class="visual-label">MACHINE LEARNING</span>
+              <div class="visual-top">
+                <span class="visual-label">STREAMLIT APP · OLS</span>
+                <span class="st-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="14" height="14"><path fill="#ff4b4b" d="M12 3.5 16.2 10 22 6.2 19.6 18.5H4.4L2 6.2 7.8 10 12 3.5Z"/></svg>
+                  Streamlit
+                </span>
+              </div>
+              <div class="st-mock" aria-hidden="true">
+                <div class="st-mock-head">
+                  <span class="st-dots"><i></i><i></i><i></i></span>
+                  <span class="st-file">app.py</span>
+                  <span class="st-live">● En línea</span>
+                </div>
+                <div class="st-formula">ln(Ŷ) = β₀ + β₁Q + β₂F + … + β₇Z</div>
+                <div class="st-widgets">
+                  <span class="st-widget">◎ Radio · Canal</span>
+                  <span class="st-widget">▾ Select · Nivel</span>
+                  <span class="st-widget"># Input · Edad</span>
+                </div>
+                <div class="st-output">
+                  <span class="st-btn">Predicción ↗</span>
+                  <span class="st-result">$ COP · exp(ln Ŷ)</span>
+                </div>
+              </div>
               <div class="visual-number">01</div>
-              <div class="visual-lines"><i></i><i></i><i></i><i></i><i></i></div>
             </div>
             <div class="project-content">
               <p class="project-type">MODELO PREDICTIVO · DATOS PROPIOS</p>
               <h3>Predicción del nivel de ingresos</h3>
-              <p>Desarrollo de un modelo de machine learning para estimar el nivel de ingresos a partir de variables socioeconómicas. El proyecto contempla una aplicación web interactiva para consultar predicciones.</p>
-              <div class="tag-list"><span>Python</span><span>Scikit-learn</span><span>Streamlit</span></div>
+              <p>Modelo econométrico OLS (log-lineal con errores estándar robustos) para estimar el ingreso promedio de la PEA ocupada en Yopal, Casanare, a partir de variables socioeconómicas (edad, experiencia, nivel educativo, género y canal laboral). Incluye una aplicación web interactiva en Streamlit para simular predicciones en tiempo real.</p>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Statsmodels</span>
+                <span>Pandas</span>
+                <span class="tag-streamlit"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="#ff4b4b" d="M12 3.5 16.2 10 22 6.2 19.6 18.5H4.4L2 6.2 7.8 10 12 3.5Z"/></svg> Streamlit</span>
+              </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-placeholder>Ver código en GitHub ↗</a>
-                <a href="#" target="_blank" rel="noopener" data-placeholder>Probar aplicación ↗</a>
+                <a href="https://github.com/antoniomedina99/Tesis_Yopal_PEA_Statsmodels/blob/main/notebooks/Reporte.ipynb" target="_blank" rel="noopener">Ver código en GitHub ↗</a>
+                <a class="link-streamlit" href="https://tesisyopalpeastatsmodels-46ww8tebawx28at5guy2kg.streamlit.app/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#ff4b4b" d="M12 3.5 16.2 10 22 6.2 19.6 18.5H4.4L2 6.2 7.8 10 12 3.5Z"/></svg>
+                  Probar aplicación en Streamlit ↗
+                </a>
               </div>
             </div>
           </article>
@@ -179,7 +191,7 @@
 
     <section class="section container" id="experiencia">
       <div class="section-heading">
-        <p class="eyebrow">03 / EXPERIENCIA</p>
+        <p class="eyebrow">02 / EXPERIENCIA</p>
         <h2>Experiencia profesional<span class="accent">.</span></h2>
       </div>
       <div class="timeline">
@@ -217,7 +229,7 @@
     <section class="section section-soft" id="formacion">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">04 / FORMACIÓN Y HABILIDADES</p>
+          <p class="eyebrow">03 / FORMACIÓN Y HABILIDADES</p>
           <h2>Conocimientos para resolver problemas.</h2>
         </div>
         <div class="education-grid">
@@ -235,7 +247,7 @@
 
     <section class="contact-section" id="contacto">
       <div class="container contact-inner">
-        <p class="eyebrow">05 / CONTACTO</p>
+        <p class="eyebrow">04 / CONTACTO</p>
         <h2>Hablemos</h2>
 
         <p>Estoy disponible a través de estos medios para cualquier consulta o intercambio profesional.</p>
