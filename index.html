@@ -56,7 +56,7 @@
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
         <div class="hero-photo-wrap">
-          <img src="Imagenes/foto_perfil.png" alt="Foto de perfil de Ciro Antonio Medina Barrera" class="hero-photo" width="900" height="1200">
+          <img src="Imagenes/foto_perfil.png" alt="Foto de perfil de Ciro Antonio Medina Barrera" class="hero-photo" width="900" height="1200" fetchpriority="high">
         </div>
         <div class="float-tags">
           <div class="float-tag tag-nlp">
@@ -177,9 +177,10 @@
                 </div>
               </div>
               <div class="vs-equation" aria-hidden="true">
-                <span class="eq-line">ln&#770;(Y) = β&#770;<sub>0</sub> + β&#770;<sub>1</sub>Q + β&#770;<sub>2</sub>F</span>
-                <span class="eq-line">+ β&#770;<sub>3</sub>X<sub>1</sub> + β&#770;<sub>4</sub>X<sub>2</sub> + β&#770;<sub>5</sub>G</span>
-                <span class="eq-line">+ β&#770;<sub>6</sub>W + β&#770;<sub>7</sub>Z + ε<sub>t</sub></span>
+                <span class="eq-kicker">OLS · LOG-LINEAL</span>
+                <span class="eq-line"><span class="eq-lhs">ln(<span class="math-hat math-hat--cap"><i>Y</i></span>)</span> <span class="eq-op">=</span> <span class="math-hat"><i>β</i></span><sub>0</sub> <span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>1</sub><i>Q</i> <span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>2</sub><i>F</i></span>
+                <span class="eq-line"><span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>3</sub><i>X</i><sub>1</sub> <span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>4</sub><i>X</i><sub>2</sub> <span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>5</sub><i>G</i></span>
+                <span class="eq-line"><span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>6</sub><i>W</i> <span class="eq-op">+</span> <span class="math-hat"><i>β</i></span><sub>7</sub><i>Z</i> <span class="eq-op">+</span> <i>ϵ</i><sub><i>t</i></sub></span>
               </div>
             </a>
             <div class="project-content">
@@ -201,31 +202,45 @@
               </div>
             </div>
           </article>
-          <article class="project-card">
-            <div class="project-visual visual-ipc">
-              <span class="visual-label">TIME SERIES</span>
-              <div class="visual-number">02</div>
-              <svg viewBox="0 0 500 160" role="img" aria-label="Ilustración de una serie temporal">
-                <path d="M0 125 C35 115 42 90 75 103 S120 135 150 85 S195 90 225 66 S270 95 300 54 S350 70 380 35 S440 55 500 12" fill="none" stroke="#9de5d1" stroke-width="5" stroke-linecap="round"/>
-                <path d="M0 125 C35 115 42 90 75 103 S120 135 150 85 S195 90 225 66 S270 95 300 54 S350 70 380 35 S440 55 500 12 L500 160 L0 160Z" fill="url(#fill)"/>
-                <defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#9de5d1" stop-opacity=".28"/><stop offset="1" stop-color="#9de5d1" stop-opacity="0"/></linearGradient></defs>
-              </svg>
-            </div>
+          <article class="project-card project-featured project-ipc">
+            <a class="project-visual visual-ipc" href="https://github.com/antoniobarrera2526/Forecast_Consumer_Price_Index_CPI_Colombia/blob/main/Notebooks/Report.ipynb" target="_blank" rel="noopener" aria-label="Abrir reporte en GitHub: Pronóstico del IPC de Colombia">
+              <div class="ipc-visual-head" aria-hidden="true">
+                <span class="visual-label">CONSUMER PRICE INDEX (CPI) COLOMBIA</span>
+                <span class="vs-label vs-trend">
+                  <svg viewBox="0 0 24 18" class="vs-trend-svg"><path d="M2 5h5v4h5v4h7" fill="none" stroke="#7ee7d2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 15.5l4-2.5-3.2-3.2" fill="none" stroke="#9de5d1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  % CPI ↓ · 10m Forecast
+                </span>
+              </div>
+              <div class="ipc-chart-frame">
+                <img src="Imagenes/Forecast%20CPI%20Colombia.png" alt="Gráfica Forecast vs Real CPI Colombia comparando AR, ARIMA, SARIMAX, LSTM y Prophet" class="visual-ipc-img" width="2065" height="762">
+              </div>
+              <div class="ipc-equation" aria-hidden="true">
+                <span class="eq-line"><i>Y</i><sub><i>t</i></sub> = <i>β</i><sub>1</sub><i>Y</i><sub><i>t</i>&minus;1</sub> + <i>β</i><sub>2</sub><i>Y</i><sub><i>t</i>&minus;2</sub> + &#8943; + <i>β</i><sub>0</sub><i>Y</i><sub>0</sub> + <i>ϵ</i><sub><i>t</i></sub></span>
+                <span class="eq-line"><i>Y</i><sub><i>t</i>&minus;1</sub> = <i>β</i><sub>1</sub><i>Y</i><sub><i>t</i>&minus;2</sub> + <i>β</i><sub>2</sub><i>Y</i><sub><i>t</i>&minus;3</sub> + &#8943; + <i>β</i><sub>0</sub><i>Y</i><sub>0</sub> + <i>ϵ</i><sub><i>t</i>&minus;1</sub></span>
+              </div>
+            </a>
             <div class="project-content">
               <p class="project-type">PRONÓSTICO · ECONOMÍA</p>
               <h3>Pronóstico del IPC de Colombia</h3>
-              <p>Extracción y análisis de datos económicos para estudiar el comportamiento del Índice de Precios al Consumidor. Implementación de SARIMAX y redes neuronales LSTM para generar predicciones a 10 meses.</p>
-              <div class="tag-list"><span>Python</span><span>SARIMAX</span><span>LSTM</span><span>Forecasting</span></div>
+              <p>Extracción y análisis de datos económicos para estudiar el comportamiento del Índice de Precios al Consumidor. Se compararon modelos AR, ARIMA, SARIMAX, redes neuronales LSTM y Prophet para generar predicciones a 10 meses, siendo <strong>SARIMAX</strong> el mejor modelo al capturar con mayor precisión la tendencia real del IPC.</p>
+              <div class="tag-list">
+                <span class="tag-tech"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="3" y="13" width="3.5" height="7" rx="1" fill="#5c9ce6"/><rect x="8.5" y="9" width="3.5" height="11" rx="1" fill="#3f72af"/><rect x="14" y="5" width="3.5" height="15" rx="1" fill="#7ee7d2"/><path d="M4 11.5C8 10 12 6.5 20.5 4.5" fill="none" stroke="#ffd166" stroke-width="2" stroke-linecap="round"/><circle cx="20.5" cy="4.5" r="1.7" fill="#ffd166"/></svg> Statsmodels</span>
+                <span class="tag-tech"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#FF6F00" d="M12.5 2.5L21 7.4v3.4l-5.4-3.1v2.6l2.7 1.5v3.1l-2.7-1.6v7.2l-3.1 1.8V2.5Z"/><path fill="#FFA000" d="M11.5 2.5L3 7.4v3.4l5.4-3.1v12.8l3.1 1.8V2.5Z"/></svg> TensorFlow</span>
+                <span class="tag-tech"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="3.5" fill="#D00000"/><path fill="#fff" d="M7.8 6.8h2.2v4.9l4.5-4.9h2.7l-4.5 4.8 4.8 5.6h-2.8l-3.6-4.3-1.1 1.1v3.2H7.8V6.8Z"/></svg> Keras</span>
+                <span class="tag-tech"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="#56B4E9" fill-opacity=".28" d="M3 16.5L8.5 13l5 1.5L21 7v6.5l-7.5 4-5-1.5L3 18.5Z"/><path fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 17l5.5-4 5 1.5L21 8.5"/><circle cx="20.5" cy="8.5" r="2" fill="#7ee7d2"/></svg> Prophet</span>
+              </div>
               <div class="project-links">
-                <a href="#" target="_blank" rel="noopener" data-placeholder>Ver análisis y resultados ↗</a>
+                <a href="https://github.com/antoniobarrera2526/Forecast_Consumer_Price_Index_CPI_Colombia/blob/main/Notebooks/Report.ipynb" target="_blank" rel="noopener">Ver análisis y resultados ↗</a>
               </div>
             </div>
           </article>
           <article class="project-card project-coming">
             <div class="coming-icon">＋</div>
-            <p class="project-type">PRÓXIMAMENTE</p>
-            <h3>Más proyectos en desarrollo</h3>
-            <p>Este espacio crecerá con nuevos casos de análisis exploratorio, segmentación, modelos predictivos y visualización de datos.</p>
+            <div class="coming-body">
+              <p class="project-type">PRÓXIMAMENTE</p>
+              <h3>Más proyectos en desarrollo</h3>
+              <p>Este espacio crecerá con nuevos casos de análisis exploratorio, segmentación, modelos predictivos y visualización de datos.</p>
+            </div>
           </article>
         </div>
 <!--
